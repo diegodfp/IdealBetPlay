@@ -95,14 +95,14 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 use mydb;
 
-INSERT INTO rol (nombre) values 
+INSERT INTO Rol (nombre) values 
 ("administrador"),
 ("equipo tecnico"),
 ("arbitro"),
 ("aficionado"),
 ("periodista"),
 ("medico");
-INSERT INTO usuario (nombre, email, password, Rol_idRol) VALUES 
+INSERT INTO Usuario (nombre, email, password, Rol_idRol) VALUES 
 ("administrador", "administrador@betplay.com", "123", 1),
 ("equipo_tecnico_1", "equipotecnico1@betplay.com", "123", 2),
 ("arbitro_1", "arbitro1@betplay.com", "123", 3),
@@ -111,7 +111,7 @@ INSERT INTO usuario (nombre, email, password, Rol_idRol) VALUES
 ("medico_1", "medico1@betplay.com", "123", 6),
 ("equipo_tecnico_2", "equipotecnico2@betplay.com", "123", 2),
 ("periodista_2", "periodista2@betplay.com", "123", 5);
-INSERT INTO permiso (descripcion, Rol_idRol) VALUES
+INSERT INTO Permiso (descripcion, Rol_idRol) VALUES
 ("Gestión de Equipos", 1),
 ("Gestión de Jugadores", 1),
 ("Gestión de Jugadores", 2),
