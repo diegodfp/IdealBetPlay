@@ -2,8 +2,10 @@ package com.betplay.view;
 
 import java.util.Scanner;
 
+import com.betplay.controller.EquiposController;
 import com.betplay.controller.LoginController;
 import com.betplay.controller.UsuariosController;
+import com.betplay.model.entity.EquipoDao;
 import com.betplay.model.entity.UsuarioDao;
 
 public class LoginView {
@@ -33,9 +35,13 @@ private LoginController loginController;
                 case "administrador":
                     // Mostrar vista de administrador
                     System.out.println("Acceso como Administrador.");
-                    AdminView view = new AdminView();
-                    UsuarioDao dao = new UsuarioDao();
-                    UsuariosController controller = new UsuariosController(view, dao);
+                    //AdminView view = new AdminView();
+                    //UsuarioDao dao = new UsuarioDao();
+                    EquipoView view = new EquipoView();
+                    EquipoDao dao = new EquipoDao();
+                    //UsuariosController controller = new UsuariosController(view, dao);
+                    //controller.start();
+                    EquiposController controller = new EquiposController(view, dao);
                     controller.start();
                     break;
                 case "equipo tecnico":

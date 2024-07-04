@@ -12,6 +12,20 @@ public class Equipo {
     private List<Partido> listPartidos;
 
     
+    
+    public Equipo() {
+    }
+
+    
+    public Equipo(String id, String nombre, String ciudad, int idEstadio, String entrenador) {
+        this.id = id;
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.idEstadio = idEstadio;
+        this.entrenador = entrenador;
+    }
+
+
     public String getId() {
         return id;
     }
