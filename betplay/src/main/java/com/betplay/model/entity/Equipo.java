@@ -6,7 +6,7 @@ public class Equipo {
     private String id;
     private String nombre;
     private String ciudad;
-    private String estadio;
+    private int idEstadio;
     private String entrenador;
     private List<Jugador> listJugadores;
     private List<Partido> listPartidos;
@@ -30,17 +30,18 @@ public class Equipo {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-    public String getEstadio() {
-        return estadio;
-    }
-    public void setEstadio(String estadio) {
-        this.estadio = estadio;
-    }
+   
     public String getEntrenador() {
         return entrenador;
     }
     public void setEntrenador(String entrenador) {
         this.entrenador = entrenador;
+    }
+    public int getIdEstadio() {
+        return idEstadio;
+    }
+    public void setIdEstadio(int idEstadio) {
+        this.idEstadio = idEstadio;
     }
     public List<Jugador> getListJugadores() {
         return listJugadores;
