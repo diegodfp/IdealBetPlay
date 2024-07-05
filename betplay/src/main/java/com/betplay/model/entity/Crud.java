@@ -6,4 +6,4 @@ public interface Crud {
     public void add();
     public <T> List<T> listar();
     }
-}
+
