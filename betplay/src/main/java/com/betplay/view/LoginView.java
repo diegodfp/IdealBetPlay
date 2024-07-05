@@ -62,6 +62,8 @@ private LoginController loginController;
                         break;
                     case 2:
                         //Gestion equipos
+                        EquipoView viewTeam = new EquipoView();
+                        EquipoDao daoTeam
                         break;
                     default:
                         System.out.println("Rol desconocido.");

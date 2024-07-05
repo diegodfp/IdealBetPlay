@@ -1,40 +1,27 @@
 package com.betplay.model.entity;
-<<<<<<< HEAD
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-=======
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
->>>>>>> main
 import java.util.Properties;
 
 public class EquipoDao {
     private Connection connection;
-<<<<<<< HEAD
-    public EquipoDao(){
-=======
 
     public EquipoDao() {
->>>>>>> main
         try {
             Properties props = new Properties();
             props.load(getClass().getClassLoader().getResourceAsStream("db.properties"));
             String url = props.getProperty("url");
             String user = props.getProperty("user");
             String password = props.getProperty("password");
-<<<<<<< HEAD
             connection = DriverManager.getConnection(url,user,password);
-=======
-            connection = DriverManager.getConnection(url, user, password);
->>>>>>> main
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
-=======
 
     public void addEquipo(Equipo equipo) throws SQLException {
         String query = "INSERT INTO equipo (nombre, ciudad, idEstadio, nombreEntrenador) VALUES (?, ?, ?, ?)";
@@ -105,5 +92,4 @@ public class EquipoDao {
             return null;
         }
     }
->>>>>>> main
 }
