@@ -2,8 +2,10 @@ package com.betplay.view;
 
 import java.util.Scanner;
 
+import com.betplay.controller.EquiposController;
 import com.betplay.controller.LoginController;
 import com.betplay.controller.UsuariosController;
+import com.betplay.model.entity.EquipoDao;
 import com.betplay.model.entity.UsuarioDao;
 
 public class LoginView {
