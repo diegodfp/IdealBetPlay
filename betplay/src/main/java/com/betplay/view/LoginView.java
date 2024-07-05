@@ -63,7 +63,9 @@ private LoginController loginController;
                     case 2:
                         //Gestion equipos
                         EquipoView viewTeam = new EquipoView();
-                        EquipoDao daoTeam
+                        EquipoDao daoTeam = new EquipoDao();
+                        EquiposController controlladorTeam = new EquiposController(viewTeam, daoTeam);
+                        controlladorTeam.start();
                         break;
                     default:
                         System.out.println("Rol desconocido.");
