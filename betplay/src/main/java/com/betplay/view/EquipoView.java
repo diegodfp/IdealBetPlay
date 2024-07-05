@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.betplay.model.entity.Equipo;
+import com.betplay.model.entity.EquipoDao;
 
 public class EquipoView {
     private Scanner scanner;
@@ -49,19 +50,20 @@ public class EquipoView {
         int pageSize = 3;
         int totalEquipos = equipos.size();
         int totalPages = (int) Math.ceil((double) totalEquipos / pageSize);
-        String leftAlignFormat = "| %-4s | %-20s | %-20s | %-10d |%n"; // Ajusta según tu formato deseado
+        String leftAlignFormat = "| %-4s | %-20s | %-20s | %-10s |%n"; // Ajusta según tu formato deseado
 
         for (int page = 1; page <= totalPages; page++) {
             System.out.format("+------+----------------------+----------------------+------------+%n");
-            System.out.format("| ID   | Nombre               | Ciudad               | Estadio ID |%n");
+            System.out.format("| ID   | Nombre               | Ciudad               |  Estadio   |%n");
             System.out.format("+------+----------------------+----------------------+------------+%n");
 
             int start = (page - 1) * pageSize;
             int end = Math.min(start + pageSize, totalEquipos);
             for (int i = start; i < end; i++) {
                 Equipo equipo = equipos.get(i);
+                EquipoDao equipoDao = new EquipoDao();
                 System.out.format(leftAlignFormat, equipo.getId(), equipo.getNombre(), equipo.getCiudad(),
-                        equipo.getIdEstadio());
+                        equipoDao.obtenerNombreEstadio(equipo.getIdEstadio()));
             }
 
             System.out.format("+------+----------------------+----------------------+------------+%n");
@@ -83,5 +85,5 @@ public class EquipoView {
     public void showMessage(String message) {
         System.out.println(message);
     }
-
+    
 }
