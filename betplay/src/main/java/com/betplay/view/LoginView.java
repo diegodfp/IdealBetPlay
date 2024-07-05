@@ -31,7 +31,8 @@ private LoginController loginController;
 
             // Obtener y mostrar la vista correspondiente al rol del usuario
             String rol = loginController.obtenerRolUsuario(usuario);
-            if(rol=="administrador"){
+            System.out.println(rol);
+            if(rol.equals("administrador")){
                 System.out.println("Seleccione el menú que desea ");
                 System.out.println("1. Gestión usuarios: ");
                 System.out.println("2. Gestión Equipos");
