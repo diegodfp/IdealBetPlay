@@ -56,10 +56,10 @@ private LoginController loginController;
                         AdminView view = new AdminView();
                         UsuarioDao dao = new UsuarioDao();
                         UsuariosController controller = new UsuariosController(view, dao);
-                        controller.start();
+                        controller.start();//Usuarios
                         break;
                     case 2:
-                        
+                        //Gestion equipos
                         break;
                     default:
                         System.out.println("Rol desconocido.");
