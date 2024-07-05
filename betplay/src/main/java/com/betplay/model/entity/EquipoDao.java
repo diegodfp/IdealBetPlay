@@ -37,7 +37,7 @@ public class EquipoDao {
         ResultSet rs = st.executeQuery(query);
         while (rs.next()) {
             Equipo equipo = new Equipo(
-                rs.getString("id"), 
+                rs.getInt("id"), 
                 rs.getString("nombre"), 
                 rs.getString("ciudad"), 
                 rs.getInt("idEstadio"), 
@@ -55,14 +55,14 @@ public class EquipoDao {
         ps.setString(2, equipo.getCiudad());
         ps.setInt(3, equipo.getIdEstadio());
         ps.setString(4, equipo.getEntrenador());
-        ps.setString(5, equipo.getId());
+        ps.setInt(5, equipo.getId());
         ps.executeUpdate();
     }
 
-    public void deleteEquipo(String id) throws SQLException {
+    public void deleteEquipo(int id) throws SQLException {
         String query = "DELETE FROM equipo WHERE id = ?";
         PreparedStatement ps = connection.prepareStatement(query);
-        ps.setString(1, id);
+        ps.setInt(1, id);
         ps.executeUpdate();
     }
 

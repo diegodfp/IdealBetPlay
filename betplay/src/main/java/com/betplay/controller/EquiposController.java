@@ -58,7 +58,7 @@ public class EquiposController {
     }
 
     private void updateEquipo() throws SQLException {
-        String id = view.getEquipoId();
+        int id = view.getEquipoId();
         Equipo equipo = view.getEquipoDetails();
         equipo.setId(id);
         dao.updateEquipo(equipo);
@@ -66,7 +66,7 @@ public class EquiposController {
     }
 
     private void deleteEquipo() throws SQLException {
-        String id = view.getEquipoId();
+        int id = view.getEquipoId();
         dao.deleteEquipo(id);
         view.showMessage("Equipo eliminado exitosamente.");
     }

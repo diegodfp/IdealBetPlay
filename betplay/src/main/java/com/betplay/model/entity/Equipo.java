@@ -3,7 +3,7 @@ package com.betplay.model.entity;
 import java.util.List;
 
 public class Equipo {
-    private String id;
+    private int id;
     private String nombre;
     private String ciudad;
     private int idEstadio;
@@ -17,7 +17,7 @@ public class Equipo {
     }
 
     
-    public Equipo(String id, String nombre, String ciudad, int idEstadio, String entrenador) {
+    public Equipo(int id, String nombre, String ciudad, int idEstadio, String entrenador) {
         this.id = id;
         this.nombre = nombre;
         this.ciudad = ciudad;
@@ -26,10 +26,10 @@ public class Equipo {
     }
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
     public String getNombre() {

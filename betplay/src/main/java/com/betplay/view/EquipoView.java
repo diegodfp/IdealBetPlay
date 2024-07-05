@@ -36,12 +36,12 @@ public class EquipoView {
         System.out.print("Nombre del entrenador ");
         String nombreEntrenador = scanner.nextLine();
         scanner.nextLine(); // Consumir la nueva línea
-        return new Equipo(null, nombre, ciudad, idEstadio, nombreEntrenador);
+        return new Equipo(0, nombre, ciudad, idEstadio, nombreEntrenador);
     }
 
-    public String getEquipoId() {
+    public int getEquipoId() {
         System.out.print("ID del equipo: ");
-        return scanner.nextLine();
+        return scanner.nextInt();
     }
 
     public void showEquipos(List<Equipo> equipos) {
@@ -85,5 +85,5 @@ public class EquipoView {
     public void showMessage(String message) {
         System.out.println(message);
     }
-    
+
 }
