@@ -153,3 +153,16 @@ INSERT INTO Permiso (descripcion, Rol_idRol) VALUES
 ("Gestión de Relaciones Públicas", 1),
 ("Gestión de Relaciones Públicas", 5);
 
+CREATE TABLE partido(
+  id INT PRIMARY KEY auto_increment,
+  idEquipoLocal int,
+  idEquipoVisitante int,
+  fecha DATE NOT NULL,
+  hora TIME NOT NULL,
+  idEstadio INT NOT NULL,
+  golesLocal INT NOT NULL,
+  golesVisitante INT NOT NULL,
+  Foreign Key (idEquipoLocal) REFERENCES equipo(id),
+  Foreign Key (idEquipoVisitante) REFERENCES equipo(id),
+  Foreign Key (idEstadio) REFERENCES estadio(id)
+);

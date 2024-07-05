@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 import com.betplay.controller.EquiposController;
 import com.betplay.controller.LoginController;
+import com.betplay.controller.PartidosController;
 import com.betplay.controller.UsuariosController;
 import com.betplay.model.entity.EquipoDao;
+import com.betplay.model.entity.PartidoDao;
 import com.betplay.model.entity.UsuarioDao;
 
 public class LoginView {
@@ -67,6 +69,13 @@ private LoginController loginController;
                         EquipoDao daoTeam = new EquipoDao();
                         EquiposController controlladorTeam = new EquiposController(viewTeam, daoTeam);
                         controlladorTeam.start();
+                        break;
+                    case 4:
+                        //gestion partidos
+                        PartidoView viewPartido = new PartidoView();
+                        PartidoDao daoPartido = new PartidoDao();
+                        PartidosController controllerPartido = new PartidosController(viewPartido, daoPartido);
+                        controllerPartido.start();
                         break;
                     default:
                         System.out.println("Rol desconocido.");
