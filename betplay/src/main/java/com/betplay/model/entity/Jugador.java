@@ -3,7 +3,8 @@ package com.betplay.model.entity;
 import java.util.List;
 
 public class Jugador {
-  private String id;
+  private int au = 0;
+  private int id;
   private String nombre;
   private int edad;
   private String posicion;
@@ -14,10 +15,10 @@ public class Jugador {
   private List<Rendimiento> ldtRendimiento;
   public Jugador() {
   }
-  public String getId() {
+  public int getId() {
     return id;
   }
-  public void setId(String id) {
+  public void setId(int id) {
     this.id = id;
   }
   public String getNombre() {
@@ -68,9 +69,9 @@ public class Jugador {
   public void setLdtRendimiento(List<Rendimiento> ldtRendimiento) {
     this.ldtRendimiento = ldtRendimiento;
   }
-  public Jugador(String id, String nombre, int edad, String posicion, String nacionalidad, int numeroCamiseta,
+  public Jugador(String nombre, int edad, String posicion, String nacionalidad, int numeroCamiseta,
       int idEquipo, List<Lesiones> lstLesiones, List<Rendimiento> ldtRendimiento) {
-    this.id = id;
+    this.id = au++;
     this.nombre = nombre;
     this.edad = edad;
     this.posicion = posicion;
